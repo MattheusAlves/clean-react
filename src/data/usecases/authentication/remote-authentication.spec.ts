@@ -77,7 +77,7 @@ describe('RemoteAuthentication', () => {
       statusCode: HttpStatusCode.ok,
       body: httpResult,
     }
-    const account = sut.auth(mockAuthentication())
+    const account = await sut.auth(mockAuthentication())
     expect(account).toEqual(httpResult)
   })
 })
